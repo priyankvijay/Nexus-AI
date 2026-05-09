@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS AI — About & Features</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+
+<!-- Particle canvas -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- ── Navbar ── -->
+<nav class="navbar" aria-label="Main Navigation">
+  <a href="index.html" class="nav-logo">NEXUS<span>.</span>AI</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="chat.html">Chat</a></li>
+    <li><a href="about.html">Features</a></li>
+    <li><a href="#contact-section">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="chat.html" class="btn-nav">Launch Chat</a>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<nav class="mobile-menu">
+  <a href="index.html">🏠 Home</a>
+  <a href="chat.html">💬 Chat</a>
+  <a href="about.html">✨ Features</a>
+  <a href="#contact-section">📬 Contact</a>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════
+     PAGE HERO
+     ════════════════════════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="page-hero-content reveal">
+    <span class="section-tag">About NEXUS AI</span>
+    <h1 class="section-title" style="font-size:clamp(2.4rem,5vw,3.8rem);">
+      Intelligence <span class="glow">Redefined</span>
+    </h1>
+    <p class="section-subtitle" style="margin:0 auto;max-width:600px;font-size:1.15rem;">
+      NEXUS AI is not just a chatbot — it's a cognitive revolution. We're building the bridge between human thought and machine intelligence.
+    </p>
+    <div style="margin-top:32px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="chat.html" class="btn-primary"><span>Try It Now →</span></a>
+      <a href="#timeline-section" class="btn-secondary">Our Journey</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     MISSION & VISION
+     ════════════════════════════════════════════════════════ -->
+<section class="about-section" style="background:linear-gradient(180deg,transparent,rgba(6,16,36,0.4),transparent);">
+  <div class="inner">
+    <div class="text-center reveal">
+      <span class="section-tag">Our Purpose</span>
+      <h2 class="section-title">Mission & <span class="glow">Vision</span></h2>
+    </div>
+
+    <div class="mission-grid">
+      <div class="mission-card reveal">
+        <h3>🎯 Our Mission</h3>
+        <p>To democratize access to advanced AI, making intelligent conversation technology available to every individual, student, developer, and business — regardless of geography or background.</p>
+        <p style="margin-top:12px;">We believe AI should empower people, not replace them. Every feature we build is designed to amplify human creativity and productivity.</p>
+      </div>
+
+      <div class="mission-card reveal">
+        <h3>🔭 Our Vision</h3>
+        <p>A world where the boundary between human intelligence and artificial intelligence becomes a spectrum of collaboration — where NEXUS AI serves as the ultimate thinking partner.</p>
+        <p style="margin-top:12px;">By 2030, we aim to serve 100 million users across 195 countries, processing conversations in every major language on Earth.</p>
+      </div>
+
+      <div class="mission-card reveal">
+        <h3>⚖️ Our Values</h3>
+        <p>Transparency in AI decision-making. Fairness across all demographics. Privacy as a fundamental right. We never sell your data and operate with full ethical oversight.</p>
+      </div>
+
+      <div class="mission-card reveal">
+        <h3>🌱 Our Commitment</h3>
+        <p>Carbon-neutral AI operations by 2025. We partner with renewable energy providers to power our data centers, and donate 1% of revenue to digital literacy programs globally.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     TECHNOLOGY STACK
+     ════════════════════════════════════════════════════════ -->
+<section class="about-section">
+  <div class="inner">
+    <div class="text-center reveal">
+      <span class="section-tag">Under the Hood</span>
+      <h2 class="section-title">Technology <span class="glow">Stack</span></h2>
+      <p class="section-subtitle">Cutting-edge frameworks and research powering every response.</p>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech-card reveal">
+        <span class="tech-icon">🧠</span>
+        <div class="tech-name">Transformer Architecture</div>
+        <div class="tech-desc">GPT-style attention mechanisms with 175B+ parameter scale for deep language understanding</div>
+      </div>
+      <div class="tech-card reveal">
+        <span class="tech-icon">⚡</span>
+        <div class="tech-name">CUDA & GPU Clusters</div>
+        <div class="tech-desc">Distributed NVIDIA A100 clusters delivering sub-50ms inference at global scale</div>
+      </div>
+      <div class="tech-card reveal">
+        <span class="tech-icon">🔗</span>
+        <div class="tech-name">RLHF Training</div>
+        <div class="tech-desc">Reinforcement Learning from Human Feedback aligns responses with genuine helpfulness</div>
+      </div>
+      <div class="tech-card reveal">
+        <span class="tech-icon">🌐</span>
+        <div class="tech-name">Multilingual NLP</div>
+        <div class="tech-desc">Cross-lingual embeddings enabling fluid conversation across 20+ languages</div>
+      </div>
+      <div class="tech-card reveal">
+        <span class="tech-icon">🔐</span>
+        <div class="tech-name">Zero-Trust Security</div>
+        <div class="tech-desc">AES-256 encryption, homomorphic compute, and zero-knowledge proofs protect data</div>
+      </div>
+      <div class="tech-card reveal">
+        <span class="tech-icon">☁️</span>
+        <div class="tech-name">Edge Computing</div>
+        <div class="tech-desc">130+ global PoPs ensure low latency regardless of your location on Earth</div>
+      </div>
+      <div class="tech-card reveal">
+        <span class="tech-icon">📊</span>
+        <div class="tech-name">Real-Time Analytics</div>
+        <div class="tech-desc">Apache Kafka + ClickHouse pipeline for live conversation quality monitoring</div>
+      </div>
+      <div class="tech-card reveal">
+        <span class="tech-icon">🤖</span>
+        <div class="tech-name">Continual Learning</div>
+        <div class="tech-desc">Federated learning loops update model knowledge without compromising user privacy</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     HOW AI WORKS
+     ════════════════════════════════════════════════════════ -->
+<section class="about-section" style="background:linear-gradient(180deg,transparent,rgba(6,16,36,0.4),transparent);">
+  <div class="inner">
+    <div class="text-center reveal">
+      <span class="section-tag">Under the Surface</span>
+      <h2 class="section-title">How <span class="glow">NEXUS Thinks</span></h2>
+      <p class="section-subtitle">Six stages from your input to a perfectly crafted response.</p>
+    </div>
+
+    <div class="how-grid">
+      <div class="how-card reveal">
+        <span class="how-icon">⌨️</span>
+        <div class="how-title">Input Tokenization</div>
+        <div class="how-desc">Your message is split into semantic tokens — the atomic units of meaning — ready for neural processing.</div>
+      </div>
+      <div class="how-card reveal">
+        <span class="how-icon">🔍</span>
+        <div class="how-title">Context Encoding</div>
+        <div class="how-desc">Self-attention layers weigh every token against every other, building a rich representation of meaning and intent.</div>
+      </div>
+      <div class="how-card reveal">
+        <span class="how-icon">🧮</span>
+        <div class="how-title">Deep Inference</div>
+        <div class="how-desc">96 transformer layers refine the representation, drawing on 175B learned parameters from training on trillions of tokens.</div>
+      </div>
+      <div class="how-card reveal">
+        <span class="how-icon">🎯</span>
+        <div class="how-title">Intent Classification</div>
+        <div class="how-desc">A dedicated classifier identifies the goal behind your message — question, command, creative request, or emotional support.</div>
+      </div>
+      <div class="how-card reveal">
+        <span class="how-icon">📝</span>
+        <div class="how-title">Response Generation</div>
+        <div class="how-desc">Autoregressive decoding produces the optimal response token-by-token, balancing fluency, accuracy, and tone.</div>
+      </div>
+      <div class="how-card reveal">
+        <span class="how-icon">✅</span>
+        <div class="how-title">Safety & Quality Filter</div>
+        <div class="how-desc">A final review layer checks for accuracy, helpfulness, and policy compliance before delivering your answer.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     TIMELINE
+     ════════════════════════════════════════════════════════ -->
+<section class="about-section" id="timeline-section">
+  <div class="inner">
+    <div class="text-center reveal">
+      <span class="section-tag">Our Journey</span>
+      <h2 class="section-title">The <span class="glow">NEXUS Timeline</span></h2>
+    </div>
+
+    <div style="max-width:700px;margin:0 auto;">
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2020 — GENESIS</div>
+          <div class="timeline-title">Project Inception</div>
+          <div class="timeline-desc">A small team of AI researchers begins sketching the architecture for a new kind of conversational AI — one that truly understands, not just predicts.</div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2021 — FOUNDATION</div>
+          <div class="timeline-title">First Model Trained</div>
+          <div class="timeline-desc">NEXUS-1 achieves human-level comprehension benchmarks on GSM8K and SuperGLUE. Seed funding secured from top-tier Silicon Valley investors.</div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2022 — GROWTH</div>
+          <div class="timeline-title">Beta Launch & 100K Users</div>
+          <div class="timeline-desc">Private beta opens to 10,000 testers. Community feedback shapes the voice input and multilingual features. We cross 100K users in 60 days.</div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2023 — SCALE</div>
+          <div class="timeline-title">NEXUS v2 — Global Expansion</div>
+          <div class="timeline-desc">NEXUS v2 launches with 20-language support and a 10× speed improvement. We reach 1 million active users across 80 countries within 6 months.</div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-year">2024 — NOW</div>
+          <div class="timeline-title">NEXUS v3 — The Future is Here</div>
+          <div class="timeline-desc">Real-time voice, continual learning, and our most accurate model yet. 2.4M users, 140 countries, and growing every day. The revolution continues.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     TEAM
+     ════════════════════════════════════════════════════════ -->
+<section class="about-section" style="background:linear-gradient(180deg,transparent,rgba(6,16,36,0.4),transparent);">
+  <div class="inner">
+    <div class="text-center reveal">
+      <span class="section-tag">The Minds Behind NEXUS</span>
+      <h2 class="section-title">Meet the <span class="glow">Team</span></h2>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-avatar">👨‍💻</div>
+        <div class="team-name">Dr. Aryan Verma</div>
+        <div class="team-role">CEO & Co-Founder</div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin-top:10px;line-height:1.6;">Former AI researcher at DeepMind. PhD in Computational Linguistics, MIT.</p>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar">👩‍🔬</div>
+        <div class="team-name">Dr. Siya Nair</div>
+        <div class="team-role">Chief AI Scientist</div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin-top:10px;line-height:1.6;">Lead researcher on RLHF and alignment. Published 30+ papers in NeurIPS and ICML.</p>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar">👨‍🎨</div>
+        <div class="team-name">Lucas Fernandez</div>
+        <div class="team-role">Head of Design</div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin-top:10px;line-height:1.6;">Previously at Apple and Figma. Crafting experiences that feel like the future.</p>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar">👩‍💼</div>
+        <div class="team-name">Priya Krishnamurthy</div>
+        <div class="team-role">VP of Engineering</div>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin-top:10px;line-height:1.6;">Built distributed systems at Google and Meta. Obsessed with scale and reliability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     FAQ
+     ════════════════════════════════════════════════════════ -->
+<section class="about-section">
+  <div class="inner">
+    <div class="text-center reveal">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Frequently Asked <span class="glow">Questions</span></h2>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-q">
+          Is NEXUS AI free to use?
+          <i class="faq-icon">+</i>
+        </div>
+        <div class="faq-a">Yes! NEXUS AI offers a generous free tier with unlimited basic conversations. Pro and Enterprise plans unlock advanced features, higher rate limits, priority access, and API integrations.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          How does NEXUS protect my privacy?
+          <i class="faq-icon">+</i>
+        </div>
+        <div class="faq-a">We use AES-256 encryption for all data in transit and at rest. We never sell personal data to third parties. Users can delete their conversation history at any time from the settings panel. Our infrastructure is SOC 2 Type II certified.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          What languages does NEXUS support?
+          <i class="faq-icon">+</i>
+        </div>
+        <div class="faq-a">NEXUS currently supports 20+ languages including English, Hindi, Spanish, French, German, Japanese, Korean, Arabic, Portuguese, and more. We add new languages quarterly based on user demand and community voting.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          Can NEXUS write code?
+          <i class="faq-icon">+</i>
+        </div>
+        <div class="faq-a">Absolutely! NEXUS excels at programming tasks — generating code, debugging, explaining algorithms, reviewing pull requests, and teaching programming concepts across JavaScript, Python, Rust, Go, Java, C++, and many other languages.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          Is NEXUS AI always online?
+          <i class="faq-icon">+</i>
+        </div>
+        <div class="faq-a">We maintain 99.9% uptime guaranteed by SLA. Our distributed infrastructure across 130+ global PoPs ensures that even if one region experiences issues, traffic automatically reroutes. Planned maintenance is announced 72 hours in advance.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          How accurate is NEXUS AI?
+          <i class="faq-icon">+</i>
+        </div>
+        <div class="faq-a">NEXUS achieves 99.7% accuracy on standardized NLP benchmarks. For factual questions, we provide source citations where possible. Like all AI systems, NEXUS may occasionally produce errors — always verify critical information from authoritative sources.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          Can I use NEXUS for my business?
+          <i class="faq-icon">+</i>
+        </div>
+        <div class="faq-a">Yes! Our Enterprise plan includes API access, custom model fine-tuning, white-label options, SLA guarantees, dedicated support, and SSO integration. Contact our sales team for custom pricing based on your organization's scale and needs.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     CONTACT FORM
+     ════════════════════════════════════════════════════════ -->
+<section class="about-section" id="contact-section" style="background:linear-gradient(180deg,transparent,rgba(6,16,36,0.4),transparent);">
+  <div class="inner">
+    <div class="text-center reveal">
+      <span class="section-tag">Get in Touch</span>
+      <h2 class="section-title">Let's <span class="glow">Connect</span></h2>
+      <p class="section-subtitle">Have questions, feedback, or want to partner? We'd love to hear from you.</p>
+    </div>
+
+    <form class="contact-form reveal" id="contact-form" novalidate>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="form-group">
+          <label class="form-label">First Name</label>
+          <input type="text" class="form-input" placeholder="Aryan" />
+          <span class="form-error"></span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Last Name</label>
+          <input type="text" class="form-input" placeholder="Verma" />
+          <span class="form-error"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-input" placeholder="hello@example.com" />
+        <span class="form-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Subject</label>
+        <input type="text" class="form-input" placeholder="Partnership / Support / Feedback" />
+        <span class="form-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-textarea" placeholder="Tell us how we can help you…"></textarea>
+        <span class="form-error"></span>
+      </div>
+
+      <div class="form-success">✅ Message sent successfully! We'll get back to you within 24 hours.</div>
+
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+        <span>Send Message →</span>
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="font-size:1.6rem;">NEXUS<span>.</span>AI</a>
+      <p>The next generation AI conversation platform. Intelligent, adaptive, and always evolving.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" aria-label="Twitter">𝕏</a>
+        <a href="#" class="social-btn" aria-label="GitHub">⬡</a>
+        <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+        <a href="#" class="social-btn" aria-label="Discord">◈</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="chat.html">Chat</a></li>
+        <li><a href="about.html">Features</a></li>
+        <li><a href="#">API</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>hello@nexus.ai</li>
+        <li>+1 (800) NEXUS-AI</li>
+        <li>San Francisco, CA</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 NEXUS AI Technologies. All rights reserved.</p>
+    <p>Privacy Policy · Terms of Service</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

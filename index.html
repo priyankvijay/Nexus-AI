@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS AI — The Future of AI Conversations</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+
+<!-- Particle canvas -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- ── Navbar ── -->
+<nav class="navbar" aria-label="Main Navigation">
+  <a href="index.html" class="nav-logo">NEXUS<span>.</span>AI</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="chat.html">Chat</a></li>
+    <li><a href="about.html">Features</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="chat.html" class="btn-nav">Launch Chat</a>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<nav class="mobile-menu" aria-label="Mobile Navigation">
+  <a href="index.html">🏠 Home</a>
+  <a href="chat.html">💬 Chat</a>
+  <a href="about.html">✨ Features</a>
+  <a href="#contact">📬 Contact</a>
+  <a href="chat.html" class="btn-primary" style="text-align:center;"><span>Launch Chat →</span></a>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════
+     HERO
+     ════════════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+
+    <!-- Left copy -->
+    <div class="hero-copy">
+      <p class="hero-eyebrow">Next-Generation Intelligence</p>
+      <h1 class="hero-title">
+        <span class="line1">The Future of</span>
+        <span class="line2">AI Conversations</span>
+      </h1>
+      <p class="hero-sub">NEXUS AI brings human-like understanding to every conversation — intelligent, adaptive, and always evolving.</p>
+      <p class="hero-typing">
+        <span id="typing-text"></span><span class="cursor"></span>
+      </p>
+      <div class="hero-cta">
+        <a href="chat.html" class="btn-primary"><span>Start Chatting →</span></a>
+        <a href="about.html" class="btn-secondary">Explore Features</a>
+      </div>
+    </div>
+
+    <!-- Right orb -->
+    <div class="hero-orb-wrap">
+      <div class="orb">
+        <div class="orb-inner">🤖</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Subtle bottom gradient fade -->
+  <div style="position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(transparent,var(--bg-primary));pointer-events:none;z-index:2;"></div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     FEATURES
+     ════════════════════════════════════════════════════════ -->
+<section class="features" id="features">
+  <div class="text-center reveal">
+    <span class="section-tag">Capabilities</span>
+    <h2 class="section-title">Built for the <span class="glow">Future</span></h2>
+    <p class="section-subtitle">Everything you need from an intelligent AI — all in one seamless platform.</p>
+  </div>
+
+  <div class="features-grid">
+
+    <div class="feature-card reveal">
+      <span class="feature-icon">🧠</span>
+      <h3 class="feature-title">Smart Responses</h3>
+      <p class="feature-desc">Context-aware answers powered by deep neural networks that understand nuance, tone, and intent.</p>
+    </div>
+
+    <div class="feature-card reveal">
+      <span class="feature-icon">🎙️</span>
+      <h3 class="feature-title">Voice Interaction</h3>
+      <p class="feature-desc">Speak naturally and NEXUS listens. Web Speech API integration for hands-free, seamless conversation.</p>
+    </div>
+
+    <div class="feature-card reveal">
+      <span class="feature-icon">⚡</span>
+      <h3 class="feature-title">Fast Processing</h3>
+      <p class="feature-desc">Lightning-fast inference engine delivers responses in milliseconds — no waiting, pure flow.</p>
+    </div>
+
+    <div class="feature-card reveal">
+      <span class="feature-icon">🔐</span>
+      <h3 class="feature-title">Secure Chats</h3>
+      <p class="feature-desc">Your conversations stay private. End-to-end encryption and zero data retention policies protect you.</p>
+    </div>
+
+    <div class="feature-card reveal">
+      <span class="feature-icon">🌍</span>
+      <h3 class="feature-title">Multi-Language Support</h3>
+      <p class="feature-desc">Communicate in 20+ languages with native-level fluency. Break language barriers effortlessly.</p>
+    </div>
+
+    <div class="feature-card reveal">
+      <span class="feature-icon">🔄</span>
+      <h3 class="feature-title">AI Learning System</h3>
+      <p class="feature-desc">NEXUS continuously improves with every interaction, adapting to your preferences over time.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     STATISTICS
+     ════════════════════════════════════════════════════════ -->
+<section class="stats" id="stats">
+  <div class="stats-grid">
+    <div class="stat-card reveal">
+      <span class="stat-number" data-count="2400000" data-suffix="+">0</span>
+      <span class="stat-label">Active Users</span>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-number" data-count="850000000" data-suffix="+">0</span>
+      <span class="stat-label">Messages Processed</span>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-number" data-count="99.7" data-suffix="%">0</span>
+      <span class="stat-label">AI Accuracy</span>
+    </div>
+    <div class="stat-card reveal">
+      <span class="stat-number" data-count="140" data-suffix="+">0</span>
+      <span class="stat-label">Countries Reached</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     TESTIMONIALS
+     ════════════════════════════════════════════════════════ -->
+<section class="testimonials" id="testimonials">
+  <div class="text-center reveal">
+    <span class="section-tag">Testimonials</span>
+    <h2 class="section-title">Loved by <span class="glow">Thousands</span></h2>
+  </div>
+
+  <div class="testimonials-track-wrap">
+    <div class="testimonials-track" id="testimonials-track">
+
+      <!-- Set 1 -->
+      <div class="testimonial-card">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"NEXUS AI completely transformed how I work. It's like having a genius co-pilot available 24/7. The responses are incredibly accurate and feel genuinely human."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">AK</div>
+          <div><div class="tcard-name">Aanya Kapoor</div><div class="tcard-role">Product Designer, Bengaluru</div></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"As a developer, I use NEXUS daily for code explanations and debugging. It's saved me countless hours. Best AI tool I've encountered in 2024."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">RS</div>
+          <div><div class="tcard-name">Rohan Singh</div><div class="tcard-role">Senior Dev, Mumbai</div></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"The voice input feature is a game-changer for accessibility. NEXUS understands my regional accent perfectly. Absolutely recommend it to everyone!"</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">PM</div>
+          <div><div class="tcard-name">Priya Mehta</div><div class="tcard-role">Educator, Chennai</div></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"I've tried many AI chatbots, but NEXUS stands apart. The futuristic interface keeps me engaged and the responses are always on point. Spectacular!"</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">JL</div>
+          <div><div class="tcard-name">James Liu</div><div class="tcard-role">Entrepreneur, Singapore</div></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"NEXUS helped me prepare for technical interviews, draft business emails, and even write a short story — all in one session. It's genuinely incredible."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">SC</div>
+          <div><div class="tcard-name">Shreya Chaudhary</div><div class="tcard-role">CS Student, Pune</div></div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"The multi-language support is flawless. I switch between English and French effortlessly. NEXUS makes international communication a breeze for my business."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">MB</div>
+          <div><div class="tcard-name">Marc Beaumont</div><div class="tcard-role">CEO, Paris</div></div>
+        </div>
+      </div>
+
+      <!-- Duplicate for seamless loop -->
+      <div class="testimonial-card">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"NEXUS AI completely transformed how I work. It's like having a genius co-pilot available 24/7. The responses are incredibly accurate and feel genuinely human."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">AK</div>
+          <div><div class="tcard-name">Aanya Kapoor</div><div class="tcard-role">Product Designer, Bengaluru</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"As a developer, I use NEXUS daily for code explanations and debugging. It's saved me countless hours. Best AI tool I've encountered in 2024."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">RS</div>
+          <div><div class="tcard-name">Rohan Singh</div><div class="tcard-role">Senior Dev, Mumbai</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"The voice input feature is a game-changer for accessibility. NEXUS understands my regional accent perfectly. Absolutely recommend it to everyone!"</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">PM</div>
+          <div><div class="tcard-name">Priya Mehta</div><div class="tcard-role">Educator, Chennai</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"I've tried many AI chatbots, but NEXUS stands apart. The futuristic interface keeps me engaged and the responses are always on point. Spectacular!"</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">JL</div>
+          <div><div class="tcard-name">James Liu</div><div class="tcard-role">Entrepreneur, Singapore</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"NEXUS helped me prepare for technical interviews, draft business emails, and even write a short story — all in one session. It's genuinely incredible."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">SC</div>
+          <div><div class="tcard-name">Shreya Chaudhary</div><div class="tcard-role">CS Student, Pune</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"The multi-language support is flawless. I switch between English and French effortlessly. NEXUS makes international communication a breeze for my business."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">MB</div>
+          <div><div class="tcard-name">Marc Beaumont</div><div class="tcard-role">CEO, Paris</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════════════════ -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="font-size:1.6rem;">NEXUS<span>.</span>AI</a>
+      <p>The next generation AI conversation platform. Intelligent, adaptive, and always evolving to serve you better.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" aria-label="Twitter">𝕏</a>
+        <a href="#" class="social-btn" aria-label="GitHub">⬡</a>
+        <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+        <a href="#" class="social-btn" aria-label="Discord">◈</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="chat.html">Chat</a></li>
+        <li><a href="about.html">Features</a></li>
+        <li><a href="#stats">Statistics</a></li>
+        <li><a href="#">API Access</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Press Kit</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>hello@nexus.ai</li>
+        <li>+1 (800) NEXUS-AI</li>
+        <li>San Francisco, CA</li>
+        <li><a href="#">Support Portal</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 NEXUS AI Technologies. All rights reserved.</p>
+    <p>Privacy Policy · Terms of Service</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

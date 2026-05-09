@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXUS AI — Chat</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+  <style>
+    /* Chat-page specific overrides */
+    body { overflow: hidden; }
+
+    /* Mouse glow */
+    #mouse-glow {
+      position: fixed;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      background: radial-gradient(circle, rgba(0,212,255,0.06) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      transition: left 0.08s, top 0.08s;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Matrix rain -->
+<canvas id="matrix-canvas"></canvas>
+<!-- Mouse glow -->
+<div id="mouse-glow"></div>
+
+<!-- ════════════════════════════════════════════════════════
+     CHAT LAYOUT
+     ════════════════════════════════════════════════════════ -->
+<div class="chat-layout">
+
+  <!-- ── Sidebar ── -->
+  <aside class="chat-sidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo">NEXUS.AI</a>
+    </div>
+
+    <button class="sidebar-new-btn" id="new-chat-btn">+ NEW CONVERSATION</button>
+
+    <div class="sidebar-history">
+      <p class="sidebar-section-label">Recent</p>
+      <div id="history-list">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <button class="sidebar-action-btn" id="clear-btn" title="Clear chat">
+        <span>🗑️</span> Clear Chat
+      </button>
+      <button class="sidebar-action-btn" id="download-btn" title="Download chat">
+        <span>⬇️</span> Download Chat
+      </button>
+      <button class="sidebar-action-btn" id="theme-btn" title="Toggle theme">
+        <span>☀️</span> Toggle Theme
+      </button>
+      <a href="index.html" class="sidebar-action-btn">
+        <span>🏠</span> Home
+      </a>
+    </div>
+  </aside>
+
+  <!-- ── Chat Main ── -->
+  <main class="chat-main">
+
+    <!-- Top bar -->
+    <div class="chat-topbar">
+      <div class="chat-topbar-left">
+        <span class="chat-model-badge">NEXUS AI v3.0</span>
+        <div class="chat-status">
+          <span class="status-dot"></span>
+          Online & Ready
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="clear-btn-top" title="Clear messages" onclick="document.getElementById('clear-btn').click()">🗑️</button>
+        <button class="icon-btn" title="Download chat" onclick="document.getElementById('download-btn').click()">⬇️</button>
+        <button class="icon-btn" title="Toggle theme" onclick="document.getElementById('theme-btn').click()">🌙</button>
+        <a href="index.html" class="icon-btn" title="Home">🏠</a>
+      </div>
+    </div>
+
+    <!-- Messages area -->
+    <div class="chat-messages" id="chat-messages">
+
+      <!-- Welcome screen (hidden when messages exist) -->
+      <div class="chat-welcome" id="chat-welcome">
+        <div class="welcome-orb">🤖</div>
+        <h2 class="welcome-title">Hello, I'm <span style="background:linear-gradient(135deg,var(--neon-blue),var(--neon-purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">NEXUS AI</span></h2>
+        <p class="welcome-sub">Your intelligent assistant — ready to answer questions, explain concepts, tell jokes, and more.</p>
+        <div class="welcome-chips">
+          <div class="welcome-chip">👋 Hello there!</div>
+          <div class="welcome-chip">Who are you?</div>
+          <div class="welcome-chip">What can you do?</div>
+          <div class="welcome-chip">Tell me a joke</div>
+          <div class="welcome-chip">Explain AI</div>
+          <div class="welcome-chip">Motivate me!</div>
+          <div class="welcome-chip">What is JavaScript?</div>
+          <div class="welcome-chip">Who created you?</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Input area -->
+    <div class="chat-input-area">
+      <div class="chat-input-wrap">
+        <textarea
+          id="chat-input"
+          placeholder="Ask NEXUS anything…"
+          rows="1"
+          aria-label="Message input"
+        ></textarea>
+        <button class="voice-btn" id="voice-btn" title="Voice input" aria-label="Voice input">🎙️</button>
+        <button class="send-btn" id="send-btn" aria-label="Send message">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+      <div class="input-hints">
+        <span class="hint-chip">explain AI</span>
+        <span class="hint-chip">tell me a joke</span>
+        <span class="hint-chip">what is JavaScript?</span>
+        <span class="hint-chip">motivate me</span>
+        <span class="hint-chip">who created you?</span>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
