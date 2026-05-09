@@ -286,8 +286,8 @@ const BOT_RESPONSES = {
   creator: {
     patterns: ['who created you','who made you','who built you','your creator','who developed you','origin'],
     replies: [
-      "I was brought to life by the brilliant engineers at **NEXUS Technologies** — a team of AI researchers, ML engineers, and visionary designers who believe in the power of intelligent conversation. Think of them as my digital parents! 🧑‍💻",
-      "NEXUS AI was created by the R&D team at **NEXUS Technologies**. They trained me on vast datasets and fine-tuned me to be as helpful, accurate, and conversational as possible. 🔬"
+      "I was brought to life by the brilliant engineer **Priyank Vijay** — a talented AI researcher, ML engineers and visionary designer who believe in the power of intelligent conversation. Think of him as my digital parent! 🧑‍💻",
+      "NEXUS AI was created by the Er. Priyank Vijay . He trained me on vast datasets and fine-tuned me to be as helpful, accurate, and conversational as possible. 🔬"
     ]
   },
   capabilities: {
