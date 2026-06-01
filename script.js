@@ -1,14 +1,12 @@
-/* ============================================================
-   NEXUS AI — script.js
-   DOM manipulation, animations, chatbot logic, voice, storage
-   ============================================================ */
+/* NEXUS AI — script.js
+   Utility functions, page effects, and chat behavior */
 
-/* ── Utility ──────────────────────────────────────────────── */
+/* Utility helpers */
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 const qs = (id) => document.getElementById(id);
 
-/* ── Navbar scroll effect ─────────────────────────────────── */
+/* Navbar scroll styling and mobile menu behavior */
 function initNavbar() {
   const navbar = $('.navbar');
   if (!navbar) return;
@@ -34,7 +32,7 @@ function initNavbar() {
   }
 }
 
-/* ── Floating Particles (home & about) ───────────────────── */
+/* Particle animation for the home and about pages */
 function initParticles() {
   const canvas = qs('particles-canvas') || document.getElementById('particles-canvas');
   if (!canvas) return;
@@ -89,7 +87,7 @@ function initParticles() {
   loop();
 }
 
-/* ── Matrix rain (chat page) ─────────────────────────────── */
+/* Matrix rain effect used on the chat page */
 function initMatrix() {
   const canvas = document.getElementById('matrix-canvas');
   if (!canvas) return;
@@ -123,7 +121,7 @@ function initMatrix() {
   setInterval(draw, 60);
 }
 
-/* ── Typing hero animation ────────────────────────────────── */
+/* Typing animation for the hero section */
 function initTyping() {
   const el = document.getElementById('typing-text');
   if (!el) return;
@@ -150,7 +148,7 @@ function initTyping() {
   type();
 }
 
-/* ── Animated Counters ────────────────────────────────────── */
+/* Animated counters for statistic cards */
 function initCounters() {
   const counters = $$('[data-count]');
   if (!counters.length) return;
@@ -179,7 +177,7 @@ function initCounters() {
   counters.forEach(c => observer.observe(c));
 }
 
-/* ── Scroll Reveal ────────────────────────────────────────── */
+/* Reveal elements when they scroll into view */
 function initScrollReveal() {
   const els = $$('.reveal');
   if (!els.length) return;
@@ -194,7 +192,7 @@ function initScrollReveal() {
   els.forEach(el => observer.observe(el));
 }
 
-/* ── FAQ Accordion (about page) ──────────────────────────── */
+/* FAQ accordion expand/collapse behavior */
 function initFaq() {
   $$('.faq-item').forEach(item => {
     const q = item.querySelector('.faq-q');
@@ -207,7 +205,7 @@ function initFaq() {
   });
 }
 
-/* ── Contact Form (about page) ───────────────────────────── */
+/* Contact form validation and user feedback */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
@@ -246,9 +244,7 @@ function initContactForm() {
   });
 }
 
-/* ═══════════════════════════════════════════════════════════
-   CHATBOT
-   ═══════════════════════════════════════════════════════════ */
+/* Chatbot response data and trigger phrases */
 
 // Knowledge base
 const BOT_RESPONSES = {
@@ -364,7 +360,7 @@ function getBotResponse(userMsg) {
   return defaults[Math.floor(Math.random() * defaults.length)];
 }
 
-/* ── Chat UI ──────────────────────────────────────────────── */
+/* Chat interface logic */
 let chatHistory = [];
 let isTyping = false;
 
@@ -382,7 +378,7 @@ function initChat() {
 
   if (!messagesEl) return; // Not on chat page
 
-  // Load history from localStorage
+  // Load saved chat history from localStorage
   loadHistory();
 
   // Auto-resize textarea
@@ -550,7 +546,7 @@ function initChat() {
   }
 
   function formatText(text) {
-    // Bold **text**
+    // Convert markdown-like bold and italics to HTML
     return text
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.*?)\*/g, '<em>$1</em>')
@@ -630,7 +626,7 @@ function initChat() {
   }
 }
 
-/* ── Mouse glow effect (chat page) ───────────────────────── */
+/* Mouse glow effect on the chat page */
 function initMouseGlow() {
   const glow = document.getElementById('mouse-glow');
   if (!glow) return;
@@ -640,7 +636,7 @@ function initMouseGlow() {
   });
 }
 
-/* ── Init all on DOMContentLoaded ─────────────────────────── */
+/* Initialize page scripts after the DOM is ready */
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initParticles();
